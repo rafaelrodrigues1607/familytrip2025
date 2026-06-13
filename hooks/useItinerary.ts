@@ -17,7 +17,7 @@ export function useItinerary() {
                 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
                 const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-                if (!supabaseUrl || !supabaseKey) {
+                if (!supabaseUrl || !supabaseKey || !supabase) {
                     console.log('Supabase not configured, using constants');
                     setLoading(false);
                     return;
